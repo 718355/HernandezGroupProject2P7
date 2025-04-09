@@ -46,6 +46,22 @@ public class FpsController : MonoBehaviour
 
         #endregion
 
+        #region Handles Jumping
+        if(Input.GetButton("Jump") && canMove && characterController.isGrounded)
+        {
+            moveDirection.y = jumpPower;
+        }
+        else
+        {
+            moveDirection.y = movementDirectionY;
+        }
+
+        if(!characterController.isGrounded)
+        {
+            moveDirection.y -= gravity * Time.deltaTime;
+        }
+        #endregion
+
         #region Handles Rotation
         characterController.Move(moveDirection * Time.deltaTime);
 
