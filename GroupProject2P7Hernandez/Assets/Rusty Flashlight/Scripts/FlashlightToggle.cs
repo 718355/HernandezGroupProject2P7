@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 
@@ -8,11 +9,23 @@ public class FlashlightToggle : MonoBehaviour
     public GameObject lightGO; //light gameObject to work with
     private bool isOn = false; //is flashlight on or off?
 
+    public AudioClip switchSound;
+    
+    private AudioSource audioSource;
+
     // Use this for initialization
     void Start()
     {
         //set default off
         lightGO.SetActive(isOn);
+
+        audioSource = GetComponent<AudioSource>();
+
+        if(audioSource == null )
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        
     }
 
     // Update is called once per frame
@@ -34,6 +47,22 @@ public class FlashlightToggle : MonoBehaviour
                 lightGO.SetActive(false);
 
             }
+            PlaySwitchSound();
+            
         }
+        
     }
+
+    
+
+    private void PlaySwitchSound()
+    {
+        if (audioSource != null)
+        {
+            audioSource.PlayOneShot(switchSound);
+        }
+
+    }
+
+
 }

@@ -12,6 +12,7 @@ public class FpsController : MonoBehaviour
     public float jumpPower = 7f;
     public float gravity = 10f;
 
+
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
 
@@ -28,6 +29,8 @@ public class FpsController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        
     }
 
 
