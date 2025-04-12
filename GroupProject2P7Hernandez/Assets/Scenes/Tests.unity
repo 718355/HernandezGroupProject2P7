@@ -45098,6 +45098,11 @@ MonoBehaviour:
   runSpeed: 11
   jumpPower: 7
   gravity: 16
+  bobSpeed: 11
+  bobAmount: 0.05
+  footstepsSounds:
+  - {fileID: 8300000, guid: 381d6afb0143b7846938efc3b58beedb, type: 3}
+  stepInterval: 0.5
   lookSpeed: 2
   lookXLimit: 45
   canMove: 1
