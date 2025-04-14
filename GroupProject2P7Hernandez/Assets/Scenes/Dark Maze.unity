@@ -46467,7 +46467,7 @@ MonoBehaviour:
   chaseSpeed: 6
   wanderSpeed: 3.5
   giveUpDistance: 15
-  player: {fileID: 0}
+  player: {fileID: 417654606}
 --- !u!1001 &1769292662
 PrefabInstance:
   m_ObjectHideFlags: 0
