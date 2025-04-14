@@ -15,7 +15,11 @@ public class MonsterAI : MonoBehaviour
     private int currentPoint = 0;
     private Animator anim;
 
-    private enum State { Wandering, Chasing }
+    public float attackRange = 2f;
+    public float attackCoolDown = 1.5f;
+    private float lastAttackTime = -Mathf.Infinity;
+
+    private enum State { Wandering, Chasing, Attacking }
     private State currentState = State.Wandering;
 
 
@@ -37,26 +41,46 @@ public class MonsterAI : MonoBehaviour
         switch (currentState)
         {
             case State.Wandering:
+                anim.SetFloat("Speed", 1f);
                 Wander();
                 if (distanceToPlayer <= sightRange)
                 {
                     currentState = State.Chasing;
                     agent.speed = chaseSpeed;
-                    anim.SetTrigger("Run");
                 }
                 break;
 
             case State.Chasing:
+                anim.SetFloat("Speed", 2f);
                 agent.SetDestination(player.position);
-                if (distanceToPlayer > giveUpDistance)
+
+                if(distanceToPlayer <= attackRange)
+                {
+                    agent.ResetPath();
+                    anim.SetTrigger("Attack");
+                }
+                else if (distanceToPlayer > giveUpDistance)
                 {
                     currentState = State.Wandering;
                     agent.speed = wanderSpeed;
-                    anim.SetTrigger("Walk");
-                    GoToNextPoint();
                 }
                 break;
+            case State.Attacking:
+                transform.LookAt(player);
 
+                if(Time.time - lastAttackTime >= attackCoolDown)
+                {
+                    anim.SetTrigger("Atttack");
+                    lastAttackTime = Time.time;
+                }
+
+                if(distanceToPlayer > attackRange)
+                {
+                    currentState = State.Chasing;
+                    agent.SetDestination(player.position);
+                    anim.SetTrigger("Run");
+                }
+                break;
         }
     }
 
