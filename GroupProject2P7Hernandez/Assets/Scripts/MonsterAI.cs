@@ -70,7 +70,7 @@ public class MonsterAI : MonoBehaviour
 
                 if(Time.time - lastAttackTime >= attackCoolDown)
                 {
-                    anim.SetTrigger("Atttack");
+                    anim.SetTrigger("Attack");
                     lastAttackTime = Time.time;
                 }
 
