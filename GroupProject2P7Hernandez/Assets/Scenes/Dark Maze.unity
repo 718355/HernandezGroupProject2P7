@@ -47978,10 +47978,10 @@ MonoBehaviour:
   - {fileID: 1539530355}
   - {fileID: 1243017271}
   - {fileID: 1822027145}
-  sightRange: 15
-  chaseSpeed: 6
-  wanderSpeed: 3.5
-  giveUpDistance: 15
+  sightRange: 7
+  chaseSpeed: 5
+  wanderSpeed: 3
+  giveUpDistance: 10
   player: {fileID: 417654606}
   attackRange: 2
   attackCoolDown: 1.5
