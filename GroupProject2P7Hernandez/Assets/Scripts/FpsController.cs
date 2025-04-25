@@ -41,8 +41,7 @@ public class FpsController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+
 
         defaultYPos = playerCamera.transform.localPosition.y;
 
