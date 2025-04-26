@@ -11,11 +11,13 @@ public class MonsterAI : MonoBehaviour
 
     private int currentWaypointIndex = 0;
     private UnityEngine.AI.NavMeshAgent agent;
+    private Animator animator;
 
 
     void Start()
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        animator = GetComponent<Animator>();
         GoToNextWaypoint();
     }
 
@@ -23,6 +25,11 @@ public class MonsterAI : MonoBehaviour
 
     void Update()
     {
+        if(animator != null)
+        {
+            animator.SetFloat("Speed", agent.velocity.magnitude);
+        }
+
         if (CanSeePlayer())
         {
             agent.SetDestination(player.position);
