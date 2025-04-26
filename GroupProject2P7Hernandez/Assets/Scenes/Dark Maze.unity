@@ -51831,7 +51831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f2ccfe2880e5949bf023c644ea62d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderPoints:
+  waypoints:
   - {fileID: 710568862}
   - {fileID: 281530187}
   - {fileID: 585779585}
@@ -51851,13 +51851,9 @@ MonoBehaviour:
   - {fileID: 1539530355}
   - {fileID: 1243017271}
   - {fileID: 1822027145}
-  sightRange: 7
-  chaseSpeed: 5
-  wanderSpeed: 3
-  giveUpDistance: 10
+  viewDistance: 10
+  viewAngle: 60
   player: {fileID: 417654606}
-  attackRange: 2
-  attackCoolDown: 1.5
 --- !u!1001 &1769292662
 PrefabInstance:
   m_ObjectHideFlags: 0
