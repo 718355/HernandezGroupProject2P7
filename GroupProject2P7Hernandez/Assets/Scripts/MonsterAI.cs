@@ -70,6 +70,14 @@ public class MonsterAI : MonoBehaviour
         return false;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            GameManager.Instance.GameOver();
+        }
+    }
+
 }
 
 

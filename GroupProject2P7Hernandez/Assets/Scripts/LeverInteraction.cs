@@ -44,6 +44,16 @@ public class LeverInteraction : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayerNear = true;
+            if (pressEImage != null)
+                pressEImage.SetActive(true);
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
