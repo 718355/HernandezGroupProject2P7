@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
     public FlashlightToggle flashlightScript;
     public FpsController playerLookScript;
 
+    public AudioSource roarSound;
+    public MonsterBreathing monsterBreathing;
+
+    public bool IsGameOver { get; private set; } = false;
+
     private void Awake()
     {
         if (Instance == null)
@@ -27,31 +32,39 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     public void GameOver()
     {
-        if(gameOverScreen != null)
+        if (gameOverScreen != null)
         {
             gameOverScreen.SetActive(true);
             Time.timeScale = 0f;
+            IsGameOver = true;
 
             if (flashlightScript != null)
                 flashlightScript.enabled = false;
 
-            if(playerLookScript != null)
+            if (playerLookScript != null)
             {
                 playerLookScript.enabled = false;
-
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
+
+            if (roarSound != null)
+                roarSound.Play();
+
+            if (monsterBreathing != null)
+                monsterBreathing.StopBreathing();
         }
     }
     public void RestartGame()
     {
         Time.timeScale = 1f;
+        IsGameOver = false;
         SceneManager.LoadScene("DarkMaze");
     }
     public void GoToMainMenu()
     {
         Time.timeScale = 1f;
+        IsGameOver = false;
         SceneManager.LoadScene("MainMenu");
     }
 }
