@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         IsGameOver = false;
-        SceneManager.LoadScene("DarkMaze");
+        SceneManager.LoadScene("Dark Maze");
     }
     public void GoToMainMenu()
     {
