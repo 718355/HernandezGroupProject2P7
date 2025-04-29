@@ -25,6 +25,7 @@ public class MonsterAI : MonoBehaviour
 
     void Update()
     {
+        // Speed and Go to way Point on Map //
         if(animator != null)
         {
             animator.SetFloat("Speed", agent.velocity.magnitude);
@@ -42,6 +43,7 @@ public class MonsterAI : MonoBehaviour
 
     void GoToNextWaypoint()
     {
+        // Move to specific Way Point //
         if (waypoints.Length == 0)
             return;
 
@@ -50,6 +52,7 @@ public class MonsterAI : MonoBehaviour
     }
     bool CanSeePlayer()
     {
+        //  If see player Monster move to player //
         Vector3 directionToPlayer = player.position - transform.position;
         float angle = Vector3.Angle(transform.forward, directionToPlayer);
 
@@ -72,6 +75,7 @@ public class MonsterAI : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // If Collision with player lead to Game Over //
         if (other.CompareTag("Player"))
         {
             GameManager.Instance.GameOver();

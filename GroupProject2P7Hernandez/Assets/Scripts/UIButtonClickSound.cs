@@ -9,6 +9,7 @@ public class UIButtonClickSound : MonoBehaviour
 
     public void PlayClickSound()
     {
+        // Play Click Sound Button Clicked //
         if (audioSource != null && clickSound != null)
         {
             audioSource.PlayOneShot(clickSound);

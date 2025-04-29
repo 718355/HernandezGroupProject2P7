@@ -27,15 +27,13 @@ public class FlashlightToggle : MonoBehaviour
         }
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(!PauseMenu.isPaused)
         {
             if (Input.GetKeyDown(KeyCode.X))
             {
-                //toggle light
+                
                 isOn = !isOn;
                 //turn light on
                 if (isOn)
@@ -61,6 +59,7 @@ public class FlashlightToggle : MonoBehaviour
 
     private void PlaySwitchSound()
     {
+        // When flashlight light active play flash light sound //
         if (audioSource != null)
         {
             audioSource.PlayOneShot(switchSound);

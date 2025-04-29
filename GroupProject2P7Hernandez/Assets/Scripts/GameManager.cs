@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     public FpsController playerLookScript;
 
     public AudioSource roarSound;
-    public MonsterBreathing monsterBreathing;
 
     public bool IsGameOver { get; private set; } = false;
 
@@ -50,9 +49,6 @@ public class GameManager : MonoBehaviour
 
             if (roarSound != null)
                 roarSound.Play();
-
-            if (monsterBreathing != null)
-                monsterBreathing.StopBreathing();
         }
     }
     public void RestartGame()
@@ -71,4 +67,5 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+    
 }

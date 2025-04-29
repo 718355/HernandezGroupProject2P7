@@ -107,6 +107,7 @@ public class FpsController : MonoBehaviour
     }
     void HandleHeadBob()
     {
+        // Head Bobbing Speed and inegration with springting //
         Vector3 horizontalVelocity = new Vector3(moveDirection.x, 0, moveDirection.z);
         if (!characterController.isGrounded || horizontalVelocity.magnitude < 0.1f)
         {
@@ -135,6 +136,7 @@ public class FpsController : MonoBehaviour
 
     void HandleFootsteps(bool isRunning)
     {
+        // Handling FootStep Sounds //
         if (!characterController.isGrounded) return;
 
         Vector3 horizontalVelocity = new Vector3(moveDirection.x, 0, moveDirection.z);
@@ -160,6 +162,7 @@ public class FpsController : MonoBehaviour
 
     void PlayFootstep()
     {
+        // AudioSource Foot Step inegration //
         if (footstepsSounds.Length == 0) return;
 
         int index = Random.Range(0, footstepsSounds.Length);
