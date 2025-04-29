@@ -9,9 +9,4 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Dark Maze");
     }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
 }

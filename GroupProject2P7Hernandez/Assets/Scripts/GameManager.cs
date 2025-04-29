@@ -67,4 +67,8 @@ public class GameManager : MonoBehaviour
         IsGameOver = false;
         SceneManager.LoadScene("MainMenu");
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

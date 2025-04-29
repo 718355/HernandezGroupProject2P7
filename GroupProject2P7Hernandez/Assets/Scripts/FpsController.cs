@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class FpsController : MonoBehaviour
 {
+    public float moveSpeed;
+
     // Camera and Movement Setting 
     public Camera playerCamera;
     public float walkSpeed = 6f;
@@ -59,6 +61,7 @@ public class FpsController : MonoBehaviour
             Vector3 right = transform.TransformDirection(Vector3.right);
 
             bool isRunning = Input.GetKey(KeyCode.LeftShift);
+            moveSpeed = isRunning ? runSpeed : walkSpeed;
             float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
             float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
             float movementDirectionY = moveDirection.y;

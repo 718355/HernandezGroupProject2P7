@@ -1155,7 +1155,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 40848389}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 58518688}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &40848389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14340,11 +14352,6 @@ PrefabInstance:
 --- !u!4 &530293552 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: baf57603f98cbdd4e8007a7276476d51, type: 3}
-  m_PrefabInstance: {fileID: 530293551}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &530293553 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -5461631470422882549, guid: baf57603f98cbdd4e8007a7276476d51, type: 3}
   m_PrefabInstance: {fileID: 530293551}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &532753078
@@ -43359,9 +43366,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6505494680676671688, guid: db1a69f26ddbf7c48a79d80538a8d820, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1478435369}
-    - targetCorrespondingSourceObject: {fileID: -6505494680676671688, guid: db1a69f26ddbf7c48a79d80538a8d820, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1478435368}
   m_SourcePrefab: {fileID: 100100000, guid: db1a69f26ddbf7c48a79d80538a8d820, type: 3}
 --- !u!4 &1478435366 stripped
 Transform:
@@ -43373,22 +43377,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -6505494680676671688, guid: db1a69f26ddbf7c48a79d80538a8d820, type: 3}
   m_PrefabInstance: {fileID: 1478435365}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1478435368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478435367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9d3ae89280048a47bdc127a1080954f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pressEImage: {fileID: 508628070}
-  gate: {fileID: 530293553}
-  gateOpenHeight: 5
-  openSpeed: 5
 --- !u!65 &1478435369
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47135,7 +47123,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1611926867}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 58518688}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: GoToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1611926867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49641,7 +49641,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1689542944}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 58518688}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1689542944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50241,6 +50253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fc17edbf1fcdaa4f80bd3400e2daea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 0
   playerCamera: {fileID: 1151177791}
   walkSpeed: 2
   runSpeed: 5
