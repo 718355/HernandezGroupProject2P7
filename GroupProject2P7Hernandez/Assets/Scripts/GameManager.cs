@@ -20,24 +20,10 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += OnSceneLoaded;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+        
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        gameOverScreen = GameObject.Find("Game Over");
-        flashlightScript = FindObjectOfType<FlashlightToggle>();
-        playerLookScript = FindObjectOfType<FpsController>();
-        roarSound = GameObject.FindWithTag("RoarSound")?.GetComponent<AudioSource>();
-
-        IsGameOver = false;
-        Time.timeScale = 1f;
-    }
     public void GameOver()
     {
         if (gameOverScreen != null)
