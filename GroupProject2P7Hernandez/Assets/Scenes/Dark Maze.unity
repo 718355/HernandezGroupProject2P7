@@ -33889,8 +33889,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4287138047
+  m_fontColor: {r: 1, g: 0.53396225, b: 0.53396225, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -42819,7 +42819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1408529100
 RectTransform:
   m_ObjectHideFlags: 0
@@ -52301,11 +52301,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fc17edbf1fcdaa4f80bd3400e2daea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
+  moveSpeed: 2
   playerCamera: {fileID: 1151177791}
-  walkSpeed: 2
+  walkSpeed: 5
   runSpeed: 10
-  jumpPower: 20
+  jumpPower: 5
   gravity: 18
   bobSpeed: 11
   bobAmount: 0.05
@@ -53682,6 +53682,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: monster_scavenger_Skin_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 2168068442106150883, guid: 4ba5cbea767d9b54eb7a655b769517da, type: 3}
+      propertyPath: m_TagString
+      value: RoarSound
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -53775,8 +53779,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.811163
+  m_Center: {x: 0, y: 0.5, z: -0}
 --- !u!114 &1765153269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55115,10 +55119,10 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 36.562714, y: 4.2394, z: 12.095291}
-  m_Center: {x: -0.33837128, y: 1.6197, z: 5.5476456}
+  m_Size: {x: 36.562714, y: 6.8939614, z: 12.095291}
+  m_Center: {x: -0.33837128, y: 2.8511288, z: 5.5476456}
 --- !u!4 &1818057196
 Transform:
   m_ObjectHideFlags: 0
@@ -59148,8 +59152,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6, y: 4, z: 0.4}
-  m_Center: {x: -3, y: 2, z: 0}
+  m_Size: {x: 6, y: 0.8877277, z: 0.40000004}
+  m_Center: {x: -3, y: 3.5561366, z: 0}
 --- !u!1001 &1938923906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61242,11 +61246,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 0, b: 0, a: 0}
+    m_HighlightedColor: {r: 0.93962264, g: 0.3173442, b: 0.3173442, a: 1}
+    m_PressedColor: {r: 0.9622642, g: 0.59369886, b: 0.59369886, a: 1}
+    m_SelectedColor: {r: 0.9547169, g: 0.776383, b: 0.776383, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:

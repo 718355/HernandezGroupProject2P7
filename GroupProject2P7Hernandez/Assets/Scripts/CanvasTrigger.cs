@@ -10,6 +10,7 @@ public class CanvasTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Player entered trigger");
             if (canvasToShow != null)
             {
                 canvasToShow.gameObject.SetActive(true);

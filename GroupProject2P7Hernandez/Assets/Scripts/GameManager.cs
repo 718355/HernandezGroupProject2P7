@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
 
     public FlashlightToggle flashlightScript;
     public FpsController playerLookScript;
-
     public AudioSource roarSound;
 
     public bool IsGameOver { get; private set; } = false;
@@ -21,6 +20,7 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -28,7 +28,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        gameOverScreen = GameObject.Find("Game Over");
+        flashlightScript = FindObjectOfType<FlashlightToggle>();
+        playerLookScript = FindObjectOfType<FpsController>();
+        roarSound = GameObject.FindWithTag("RoarSound")?.GetComponent<AudioSource>();
+
+        IsGameOver = false;
+        Time.timeScale = 1f;
+    }
     public void GameOver()
     {
         if (gameOverScreen != null)
@@ -67,5 +76,7 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    
     
 }
