@@ -9,5 +9,8 @@ public class MainMenu : MonoBehaviour
     {
         // Main Menu Transition to Maze //
         SceneManager.LoadScene("Dark Maze");
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
